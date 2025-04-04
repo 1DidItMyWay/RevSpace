@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaced Repetition</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<header><h1>RevSpace</h1></header>
+
+
+<div class="container">
+    <form id="topics-form">
+        <label for="timezone">Timezone:</label>
+        <input type="text" id="timezone" placeholder="" required>
+        <button type="button" onclick="setTimezone()">Set Timezone</button>
+        <br>
+        <div class="maintopic">
+            <div id="topics-container">
+                <div class="topic-entry">
+                    <label for="topic">Topic:</label>
+                    <input type="text" class="topic" required>
+
+                    <label for="start-date">Start Date:</label>
+                    <input class="topic-date" type="date" class="start-date" required>
+
+                    <label for="time">Time:</label>
+                    <input type="time" class="time" required>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" onclick="addMoreTopics()">Add More Topics</button>
+                <button type="button" onclick="addTopics()">Add All Topics</button>
+                <br>
+            </div>
+        </div>
+
+        <br>
+
+
+    </form>
+
+    <h2 id="topicsh">Topics</h2>
+    <table id="topicst">
+        <tr>
+            <th>Topic</th>
+            <th>Set on</th>
+            <th>1 day</th>
+            <th>7 days</th>
+            <th>14 days</th>
+            <th>21 days</th>
+            <th>30 days</th>
+            <th>60 days</th>
+            <th>120 days</th>
+            <th>180 days</th>
+            <th id="deletebtn"></th>
+        </tr>
+        <tbody id="topics-list"></tbody>
+
+    </table>
+    <button class="dltbtn" onclick="deleteList()">Delete List</button>
+    <br>
+    <button class="dltbtn" onclick="generateICS()">Download ICS</button>
+    <button class="dltbtn" onclick="addToGoogleCalendar()">Add to Google Calendar</button>
+</div>
+
+
+<script defer src="script.js"></script>
+</body>
+</html>

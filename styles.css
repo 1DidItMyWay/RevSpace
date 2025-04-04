@@ -1,0 +1,149 @@
+body {
+    background-color: #F3F4F6;
+    color: #1F2937;
+    font-family: 'Inter', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    border-color: #E5E7EB;
+}
+
+tr {
+
+}
+
+th, td {
+    border: 1px solid black; /* Apply border to all table cells */
+    padding: 5px;
+    white-space: nowrap;
+}
+
+td:first-child, th:first-child {
+    word-break: break-all;
+!important max-width: 100 px;
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Remove border for the last column in both header and body */
+th:last-child, td:last-child {
+    border: none;
+}
+
+.container {
+    max-width: 720px;
+    margin: auto;
+    text-align: center;
+}
+
+#delete-icon {
+    opacity: 0;
+}
+
+#delete-icon:hover {
+    opacity: 1;
+
+}
+
+header h1 {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+#topicst {
+    display: none;
+}
+
+#topicsh {
+    display: none;
+}
+
+.dltbtn {
+    display: none;
+}
+
+button {
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #3B82F6;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #E5E7EB;
+    font-variation-settings: "wdth" 100;
+}
+
+button:hover {
+    box-shadow: 5px 5px #1F2937;
+}
+
+input {
+    border-radius: 6px;
+    border-color: #d1d5db;
+}
+
+#delete-icon, #dltbtn {
+    background-color: #EF4444 !important;
+}
+
+.maintopic {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.maintopic div {
+    margin: 10px;
+}
+
+#topicst {
+    max-width: 720px;
+    overflow: scroll;
+}
+
+@media (max-width: 768px) {
+    .topic-entry {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input, button {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+/* Hide unnecessary elements on small screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
