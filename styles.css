@@ -54,7 +54,20 @@ header h1 {
     padding: 10px;
     text-align: center;
 }
-
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    padding: 10px;
+    text-decoration: none;
+    color: #1F2937;
+}
+header a:visited{
+    text-decoration: none;
+    color: #1F2937;
+}
 #topicst {
     display: none;
 }
@@ -146,4 +159,75 @@ input {
         font-size: 14px;
         padding: 8px;
     }
+}
+
+.docs {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap; /* ensures it stacks on small screens */
+    justify-content: space-around;
+}
+
+#info {
+    flex: 3;
+    min-width: 0;
+    max-width: 720px;
+    position: relative;
+}
+#info img{
+    width: 100%;
+}
+#guide {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    background-color: #f9fafb;
+    padding: 16px;
+    border-radius: 8px;
+
+    border: 1px solid #e5e7eb;
+}
+
+/* Optional: Style guide links */
+#guide ul {
+    list-style: none;
+    padding: 0;
+}
+
+#guide li {
+    margin-bottom: 10px;
+}
+
+#guide a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+#guide a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .docs {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #guide {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+        margin: 20px auto 0 auto;
+    }
+}
+
+figcaption{
+    font-size: 12px;
 }
