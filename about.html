@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevSpace</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+          rel="stylesheet">
+    <meta name="title" content="RevSpace – Spaced Repetition Calendar Generator">
+    <meta name="description"
+          content="RevSpace helps you schedule spaced repetition study sessions using a smart calendar you can import to Google Calendar. Stay consistent, remember more.">
+
+
+    <meta name="keywords"
+          content="spaced repetition, spaced repetition calendar, revision planner, study schedule, Google Calendar ICS, memory retention, spaced learning, spaced repetition app, RevSpace">
+
+
+    <meta name="author" content="1diditmyway">
+
+
+    <meta name="robots" content="index, follow">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="canonical" href="https://1diditmyway.github.io/RevSpace/">
+
+
+    <link rel="me" href="https://ko-fi.com/ididitmyway">
+
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "RevSpace",
+            "url": "https://1diditmyway.github.io/RevSpace/",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "All",
+            "author": {
+                "@type": "Person",
+                "name": "1diditmyway"
+            },
+            "description": "RevSpace is a free tool that generates spaced repetition revision schedules and exports them to Google Calendar using ICS files.",
+            "browserRequirements": "Requires modern browser with JavaScript enabled",
+            "offers": {
+                "@type": "Offer",
+                "price": "0.00",
+                "priceCurrency": "USD"
+            },
+            "potentialAction": {
+                "@type": "UseAction",
+                "target": "https://1diditmyway.github.io/RevSpace/"
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div><h1>RevSpace</h1></div>
+    <div>
+        <a href="about.html">Guide</a>
+        <a href="https://ko-fi.com/ididitmyway">Support me</a>
+    </div>
+</header>
+
+<div class="docs">
+    <div id="guide">
+        <h2>Guide</h2>
+        <ul>
+            <li><a href="#intro1">What is RevSpace</a></li>
+            <li><a href="#intro2">What is spaced repetition</a></li>
+            <li><a href="#intro3">How spaced repetition works</a></li>
+            <li><a href="#intro4">How are the intervals scheduled</a></li>
+            <li><a href="#intro5">How this web app works?</a></li>
+            <li><a href="#intro6">Note</a></li>
+
+        </ul>
+    </div>
+    <div id="info">
+        <h2 id="intro1">What is RevSpace</h2>
+        <p>RevSpace is a web app that helps you make a calendar that when imported to Google calendar, helps schedule
+            revision dates for spaced repetition</p>
+        <br>
+        <h2 id="intro2">What is spaced repetition</h2>
+        <p>
+            To know what spaced repetition method is, lets learn about something first.
+            <br>
+            When you learn something, you tend to forget it after a few days, i.e. it decays, starting from an hour
+            after you've learned it.
+        <figure>
+            <img src="images/Graph-1024x788.png" alt="forgetting curve">
+            <figcaption>Src- maestrolearning.com</figcaption>
+
+        </figure>
+
+        The above image shows how huch information you retain over time (unless you are a genius who remembers
+        everything).
+        <br>As you can see, you forget what you learned over time.
+        <br>To combat this, there are a lot of memorization or retention techniques one of which, is Spaced Repetition.
+
+        </p>
+        <p>Spaced Repetition helps you remember what you learned for a longer time</p>
+
+
+        <h2 id="intro3">How spaced repetition works</h2>
+        <p>Spaced Repetition involves having the learner actively recall what you learned from memory at gradually
+            increasing intervals.</p>
+        <p>At each interval, after recalling, review your performance, see what you missed and then add more
+            information(what you missed and also what you didn't)</p>
+        <img src="images/spaced%20rep.webp" alt="">
+        <figcaption>A time vs retention graph</figcaption>
+        <p>This graph shows how after each iteration or after each recall, information is retained for a longer period,
+            but the next review happens before your memory of the information decays significantly.</p>
+        <p>After a few repetitions (iterations) the curve flattens out, i.e. you remember it for long time.</p>
+
+        <h2 id="intro4">How are the intervals scheduled</h2>
+        <p>Now there are quite a few methods like</p>
+        <ol>
+            <li>SM-2</li>
+            <p>Revise on 1, 7, 16, and 35 days after learning</p>
+            <li>i111 method</li>
+            <p>Revise immediately after, 1 day, 1 week and then 1 month after learning</p>
+            <li>My method</li>
+            <p>This is a combination method that is useful for both easy and hard topics.
+                <br>
+                It has 9 iterations.
+            <ol>
+                <li>Immediately after</li>
+                <li>1 day later</li>
+                <li>7 days later</li>
+                <li>14 days later</li>
+                <li>21 days later</li>
+                <li>30 days later</li>
+                <li>60 days later</li>
+                <li>120 days later</li>
+                <li>180 days later</li>
+
+            </ol>
+            Its not too steep, though it might feel slow for some.
+            </p>
+        </ol>
+
+        <h2 id="intro5">How this web app works?</h2>
+        <p>This app, takes your topics with starting date and time with your timezone.
+            <br>
+            It then takes this data, calculates dates for next revisions and creates an ICS(Internet Calendaring and
+            Scheduling) file which you can import into your calendars.
+            <br>
+            When imported, your revisions are scheduled into calendars instead of doing it manually</p>
+        <p>p.s. None of your date is collected or stored, everything happens on your side during your session. Deleting
+            the list or reloading the window will erase everything.</p>
+        <br>
+        Guide:
+        <ol>
+            <li>Timezone</li>
+            <p>Your timezone is detected automatically, but if you want to choose another one just check the <a
+                    href="">Timezone list</a>, change it and press Set Timezone button </p>
+            <button>Set Timezone</button>
+            <li>Topics</li>
+            <p>These are the actual topics you want to revise,
+                <br>
+                input the Topic, its starting date is present day by default(which you can change) and set the starting
+                time.</p>
+            <p>To add more topics, press Add More Topics button
+                <button>Add More Topics</button>
+            </p>
+            <p>To add all topics to the list, press Add All Topics button
+                <button>Add All Topics</button>
+            </p>
+
+            <li>Topics list</li>
+            <p>This is a table that displays all your topics with its title, starting date and dates for the upcoming
+                revisions.</p>
+            <p>At the end of each row, there is a delete icon
+                <button>🗑️</button>
+                whuch is visible when you hover over it.
+            </p>
+            <p>Below the list is the Delete List button
+                <button>Delete List</button>
+                which deletes the entire list
+            </p>
+
+            <li>Download ICS</li>
+            <p>This button
+                <button>Download ICS</button>
+                when pressed, initiates the download of ICS file
+            </p>
+
+            <li>Add to Google Calendar</li>
+            <p>This button opens the google calendar import/export page in a new tab where you can import your ICS
+                file.</p>
+            <p>Or you can do this manually in the calendar you want if it has a feature to import ics files. </p>
+
+
+        </ol>
+
+        <h2 id="intro6">Note</h2>
+        <p>I will be adding more features as I think of them or as necessary, if you have any suggestions, send them <a
+                href="feedback.html">here</a>.</p>
+        <p>If you liked RevSpace or if it helped you consider helping me at <a href="https://ko-fi.com/ididitmyway">Ko-Fi</a> </p>
+    </div>
+
+</div>
+
+</body>
+</html>
