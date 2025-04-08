@@ -2,6 +2,7 @@ body {
     background-color: #F3F4F6;
     color: #1F2937;
     font-family: 'Inter', sans-serif;
+    
 }
 
 table {
@@ -79,11 +80,14 @@ header a:visited{
 .dltbtn {
     display: none;
 }
-
+label{
+    font-size: 1rem;
+}
 button {
     border: none;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
+    font-size: 1rem;
     border-radius: 5px;
     background-color: #3B82F6;
     font-family: "Roboto", sans-serif;
@@ -100,6 +104,8 @@ button:hover {
 input {
     border-radius: 6px;
     border-color: #d1d5db;
+    font-size: 1rem;
+    padding: 5px;
 }
 
 #delete-icon, #dltbtn {
